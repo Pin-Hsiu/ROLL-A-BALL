@@ -10,6 +10,8 @@ public class TimeCounter : MonoBehaviour
 
     void Start()
     {
+        
+
         InvokeRepeating("timer", 1f, 1f);
         text = GetComponent<Text>();
         time = 0;
@@ -24,4 +26,6 @@ public class TimeCounter : MonoBehaviour
     {
         text.text = "TIME: " + timer_i;
     }
+
+
 }
