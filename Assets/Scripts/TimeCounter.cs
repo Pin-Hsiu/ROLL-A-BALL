@@ -26,7 +26,7 @@ public class TimeCounter : MonoBehaviour
     {
         text.text = "TIME: " + timer_i;
         if (timer_i <= 0)
-            CancelInvoke();
+            text.text = "Time's up." ;
     }
 
     
