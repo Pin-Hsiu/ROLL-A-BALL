@@ -22,9 +22,19 @@ public class TimeCounter : MonoBehaviour
         Debug.Log(timer_i);
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            timer_i += 3;
+            Debug.Log(timer_i);
+        }
+    }
+
+
     void Update()
     {
-        text.text = "TIME: " + timer_i;
+        text.text = "TIME: " + timer_i ;
         if (timer_i <= 0)
             text.text = "Time's up." ;
     }
