@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
 	
 	private Rigidbody rb;
 	private int count;
-    
+    private int timer_i;
 	
 	void Start ()
 	{
@@ -48,4 +48,12 @@ public class PlayerController : MonoBehaviour {
 			winText.text = "You Win!";
 		}
 	}
+
+    void EndGame ()
+    {
+        if (timer_i <= 0)
+        {
+            speed = 0;
+        }
+    }
 }
