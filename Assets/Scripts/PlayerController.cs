@@ -51,13 +51,14 @@ public class PlayerController : MonoBehaviour {
 		{
 			winText.text = "You Win!";
 		}
-	}
+    }
 
     void EndGame ()
     {
         if (timer_i <= 0)
         {
-            speed = 0;
+           
         }
+        gameObject.SetActive(false);
     }
 }
