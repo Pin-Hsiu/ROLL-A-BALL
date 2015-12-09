@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody rb;
 	private int count;
     private int timer_i;
+
 	
 	void Start ()
 	{
@@ -37,7 +38,10 @@ public class PlayerController : MonoBehaviour {
 			other.gameObject.SetActive (false);
 			count = count + 1;
 			SetCountText ();
-		}
+            TimeCounter.timer_i += 3;
+            Debug.Log(TimeCounter.timer_i);
+            
+        }
 	}
 	
 	void SetCountText ()

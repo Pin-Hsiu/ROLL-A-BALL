@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class TimeCounter : MonoBehaviour
 {
     public static int time;
-    int timer_i = 10;
+    public static int timer_i = 10;
     Text text;
 
     void Start()
@@ -18,18 +18,11 @@ public class TimeCounter : MonoBehaviour
     }
     void timer()
     {
-        timer_i -= 1;
-        Debug.Log(timer_i);
+        if (timer_i > 0)
+            timer_i -= 1;
+        //Debug.Log(timer_i);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("PickUp"))
-        {
-            timer_i += 3;
-            Debug.Log(timer_i);
-        }
-    }
 
 
     void Update()
