@@ -57,8 +57,8 @@ public class PlayerController : MonoBehaviour {
     {
         if (timer_i <= 0)
         {
-           
+            gameObject.SetActive(false);
         }
-        gameObject.SetActive(false);
+        
     }
 }

@@ -29,7 +29,9 @@ public class TimeCounter : MonoBehaviour
     {
         text.text = "TIME: " + timer_i ;
         if (timer_i <= 0)
-            text.text = "Time's up." ;
+        {
+            text.text = "Time's up.";
+        }
     }
 
     
