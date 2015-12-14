@@ -45,18 +45,26 @@ public class HorseMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Store the input axes.
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        //Debug.Log(TimeCounter.timer_i);
+        if (TimeCounter.timer_i > 0)
+        {
+            // Store the input axes.
+            float h = Input.GetAxisRaw("Horizontal");
+            float v = Input.GetAxisRaw("Vertical");
 
-        // Move the player around the scene.
-        Move(h, v);
+            // Move the player around the scene.
+            Move(h, v);
 
-        // Turn the player to face the mouse cursor.
-        Turning();
+            // Turn the player to face the mouse cursor.
+            Turning();
 
-        // Animate the player.
-        Animating(h, v);
+            // Animate the player.
+            Animating(h, v);
+        }
+        else
+        {
+            CancelInvoke();
+        }
     }
 
     void Move(float h, float v)
